@@ -11,9 +11,12 @@ public class FisrtSpringBootWithGradleApplication {
 
 	@GetMapping("/")
 	public int getMethod() {
-		return 7;
+		return 1;
 	}
-	
+	@GetMapping("/2")
+	public int getMethod2() {
+		return 2;
+	}
 	public static void main(String[] args) {
 		System.out.println("Testing this application First");
 		SpringApplication.run(FisrtSpringBootWithGradleApplication.class, args);
