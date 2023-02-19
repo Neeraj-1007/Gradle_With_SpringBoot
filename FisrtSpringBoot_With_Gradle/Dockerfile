@@ -1,3 +1,4 @@
-FROM openjdk:12-jdk-alpine
-COPY FirstSpringBoot_With_Gradle.jar FirstSpringBoot_With_Gradle.jar
-CMD ["java","-jar","FirstSpringBoot_With_Gradle.jar"]
+FROM openjdk:8
+EXPOSE 8080
+COPY FirstSpringBoot_With_Gradle.war FirstSpringBoot_With_Gradle.war
+ENTRYPOINT ["java","-war","FirstSpringBoot_With_Gradle.war"]
