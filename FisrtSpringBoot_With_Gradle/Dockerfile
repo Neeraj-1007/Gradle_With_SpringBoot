@@ -1,4 +1,4 @@
 FROM openjdk:8
-EXPOSE 8080
-COPY FirstSpringBoot_With_Gradle.jar FirstSpringBoot_With_Gradle.jar
-ENTRYPOINT ["java","-jar","FirstSpringBoot_With_Gradle.jar"]
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
