@@ -1,4 +1,4 @@
 FROM openjdk:8
-ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080
+ADD build/libs/FisrtSpringBoot_With_Gradle-0.0.1-SNAPSHOT.war FisrtSpringBoot_With_Gradle-0.0.1-SNAPSHOT.war
+ENTRYPOINT ["java","-jar","/FisrtSpringBoot_With_Gradle-0.0.1-SNAPSHOT.war"]
